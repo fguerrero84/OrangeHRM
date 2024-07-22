@@ -1,0 +1,10 @@
+1.- correr el test con interfaz: npx playwright test --ui
+2.- ejecutar el recorder: npx playwright codegen http://google.com
+3.- ejecutar el test case: npx playwright test / npx playwright test -- headed
+4.- reporter : npx playwright show-report
+5.- ejecutar un test en especifico: npx playwright test /tests/UIBasicstest.spect.js
+6.- inicializar playwright : npm init playwright@latest  
+
+
+
+more inf: https://playwright.dev/docs/intro
