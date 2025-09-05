@@ -13,7 +13,7 @@ const config = {
   projects: [
     { name: 'chromium',
     use: {
-    baseURL: 'https://hrms.apexsystemsinc.com/psc/HRPRD/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL?&',
+    baseURL: 'https://hrms.apexsystemsinc.com/psc/HRPRD/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL',
         browserName: 'chromium', 
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
