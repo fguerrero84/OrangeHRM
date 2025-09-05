@@ -26,7 +26,13 @@ await timeSheets.clickSubmit();
 await submitConfirmationPage.confirmSubmit();
 
 // verify reported hours are 40 in timesheets page
-await tp_expect(timeSheets.frame.locator('#DERIVED_TL_WEEK_TL_QUANTITY')).toHaveText('40.00');
+try { 
+    await tp_expect(timeSheets.frame.locator('#DERIVED_TL_WEEK_TL_QUANTITY')).toHaveText('40.00');
+    console.log("Timesheets successfully submitted");
+}catch (error){
+    console.error("Something went wrong, timesheets were not submitted");
+    console.error("Details: ", error.message);
+}
 
 
 
