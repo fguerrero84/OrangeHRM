@@ -1,6 +1,6 @@
 {
   "config": {
-    "configFile": "C:\\Users\\fguerrero\\playwrightgit\\Playwright\\playwright.config.js",
+    "configFile": "C:\\Users\\fguerrero\\playwrightgit\\Playwright\\playwright.config.ts",
     "rootDir": "C:/Users/fguerrero/playwrightgit/Playwright/tests",
     "forbidOnly": false,
     "fullyParallel": false,
@@ -50,7 +50,7 @@
         "testDir": "C:/Users/fguerrero/playwrightgit/Playwright/tests",
         "testIgnore": [],
         "testMatch": [
-          "/.*\\.ts/"
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
         ],
         "timeout": 30000
       }
@@ -82,10 +82,10 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 25,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 22191,
+                  "duration": 21416,
                   "errors": [],
                   "stdout": [
                     {
@@ -94,7 +94,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-09-05T16:32:30.494Z",
+                  "startTime": "2025-09-05T20:14:40.095Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -112,8 +112,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-05T16:32:24.650Z",
-    "duration": 34253.13699999452,
+    "startTime": "2025-09-05T20:14:33.157Z",
+    "duration": 34883.08,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
