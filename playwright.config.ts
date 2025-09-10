@@ -9,7 +9,7 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        baseURL: 'https://hrms.apexsystemsinc.com/psc/HRPRD/EMPLOYEE/HRMS/c/NUI_FRAMEWORK.PT_LANDINGPAGE.GBL',
+        baseURL: 'https://freelance-learn-automation.vercel.app/',
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
         headless: false,

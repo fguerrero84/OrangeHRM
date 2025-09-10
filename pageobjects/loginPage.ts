@@ -4,21 +4,21 @@ export default class LoginPage {
     constructor(public page:Page) {}
 
 async login(userID:string, password:string) {
-    await this.enterUserID(userID);
+    await this.enterEmail(userID);
     await this.enterPassword(password);
     await this.clickSignIn();
 }
 
-async enterUserID(userID:string) {
-    await this.page.locator('#userid').fill(userID);
+async enterEmail(userID:string) {
+    await this.page.locator('#email1').fill(userID);
 }
 
 async enterPassword(password:string) {
-    await this.page.locator('#pwd').fill(password);
+    await this.page.locator('#password1').fill(password);
 }
 
 async clickSignIn() {
-    await this.page.locator("input[name='Submit']").click();
+    await this.page.locator("//button[@type='submit']").click();
 }
 };
 

@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\fguerrero\\playwrightgit\\Playwright\\playwright.config.ts",
-    "rootDir": "C:/Users/fguerrero/playwrightgit/Playwright/tests",
+    "configFile": "C:\\Users\\fguerrero\\FreelanceCourseDemo\\freelancer\\playwright.config.ts",
+    "rootDir": "C:/Users/fguerrero/FreelanceCourseDemo/freelancer/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -39,7 +39,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/fguerrero/playwrightgit/Playwright/test-results",
+        "outputDir": "C:/Users/fguerrero/FreelanceCourseDemo/freelancer/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -47,7 +47,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/fguerrero/playwrightgit/Playwright/tests",
+        "testDir": "C:/Users/fguerrero/FreelanceCourseDemo/freelancer/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -57,20 +57,20 @@
     ],
     "shard": null,
     "updateSnapshots": "missing",
-    "updateSourceMethod": "3way",
+    "updateSourceMethod": "patch",
     "version": "1.55.0",
     "workers": 7,
     "webServer": null
   },
   "suites": [
     {
-      "title": "AddBenchTimesheets.test.ts",
-      "file": "AddBenchTimesheets.test.ts",
+      "title": "courseCRUD.test.ts",
+      "file": "courseCRUD.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Submit bench timesheet",
+          "title": "Course E2E",
           "ok": true,
           "tags": [],
           "tests": [
@@ -85,16 +85,19 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 21416,
+                  "duration": 25683,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Timesheets successfully submitted\n"
+                      "text": "Category \"DemoPlay\" added.\n"
+                    },
+                    {
+                      "text": "Category \"DemoPlay\" exists: true\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-09-05T20:14:40.095Z",
+                  "startTime": "2025-09-10T22:33:27.284Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -102,9 +105,9 @@
               "status": "expected"
             }
           ],
-          "id": "90996da8a451832c1e0d-54438eb6f38ad9cbc088",
-          "file": "AddBenchTimesheets.test.ts",
-          "line": 4,
+          "id": "fd8a1d8ff31e5699b7d7-4bf2bf59fd97cba57064",
+          "file": "courseCRUD.test.ts",
+          "line": 5,
           "column": 8
         }
       ]
@@ -112,8 +115,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-05T20:14:33.157Z",
-    "duration": 34883.08,
+    "startTime": "2025-09-10T22:33:24.091Z",
+    "duration": 52520.446,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
