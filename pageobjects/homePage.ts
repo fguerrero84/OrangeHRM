@@ -16,4 +16,13 @@ export default class HomePage {
         //clicking on manage categories will open a new tab
         await this.page.locator("(//a[@class='nav-menu-item false'])[2]").click();
     }
+
+    async addCourseToCart(){
+        await this.page.locator('.course-card', { hasText: 'play test' }).getByRole('button', { name: 'Add to Cart' }).click();
+    }
+
+    async goToCart(){
+        await this.page.locator("button.cartBtn").click();
+    }
+    
 };

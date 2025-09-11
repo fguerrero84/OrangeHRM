@@ -85,19 +85,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 25683,
+                  "duration": 23748,
                   "errors": [],
-                  "stdout": [
-                    {
-                      "text": "Category \"DemoPlay\" added.\n"
-                    },
-                    {
-                      "text": "Category \"DemoPlay\" exists: true\n"
-                    }
-                  ],
+                  "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-09-10T22:33:27.284Z",
+                  "startTime": "2025-09-11T22:20:07.504Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -107,7 +100,7 @@
           ],
           "id": "fd8a1d8ff31e5699b7d7-4bf2bf59fd97cba57064",
           "file": "courseCRUD.test.ts",
-          "line": 5,
+          "line": 6,
           "column": 8
         }
       ]
@@ -115,8 +108,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-10T22:33:24.091Z",
-    "duration": 52520.446,
+    "startTime": "2025-09-11T22:19:58.437Z",
+    "duration": 54851.172,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

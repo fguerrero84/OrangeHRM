@@ -6,6 +6,7 @@ import SubmitConfirmationPage from '../pageobjects/submitConfirmationPage';
 import LandingPage from '../pageobjects/landingPage';
 import CategoriesPage from '../pageobjects/categoriesPage';
 import CoursesPage from '../pageobjects/coursesPage';
+import CartPage from '../pageobjects/cartPage';
 
 
 type pages = {
@@ -16,6 +17,7 @@ type pages = {
     submitConfirmationPage: SubmitConfirmationPage;
     coursesPage: CoursesPage;
     categoriesPage: CategoriesPage;
+    cartPage: CartPage;
 };
 
 const testPages = baseTest.extend<pages>({
@@ -41,6 +43,9 @@ const testPages = baseTest.extend<pages>({
     },
     categoriesPage: async ({ page }, use) => {
         await use (new CategoriesPage(page)); 
+    },
+    cartPage: async ({ page }, use) => {
+        await use (new CartPage(page)); 
     },
 
 });

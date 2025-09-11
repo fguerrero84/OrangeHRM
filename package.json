@@ -9,7 +9,11 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.55.0",
-    "@types/node": "^20.11.6",
+    "@types/date-fns": "^2.5.3",
+    "@types/node": "^20.19.13",
     "allure": "^0.0.0"
+  },
+  "dependencies": {
+    "date-fns": "^4.1.0"
   }
 }
