@@ -17,8 +17,8 @@ export default class HomePage {
         await this.page.locator("(//a[@class='nav-menu-item false'])[2]").click();
     }
 
-    async addCourseToCart(){
-        await this.page.locator('.course-card', { hasText: 'play test' }).getByRole('button', { name: 'Add to Cart' }).click();
+    async addCourseToCart(courseName: string){
+        await this.page.locator('.course-card', { hasText: courseName }).getByRole('button', { name: 'Add to Cart' }).click();
     }
 
     async goToCart(){

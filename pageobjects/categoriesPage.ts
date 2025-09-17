@@ -1,8 +1,9 @@
-import { Page } from '@playwright/test';
+import { expect, Page } from '@playwright/test';
 
 export default class CategoriesPage {
     constructor(public page: Page) {}
     // method that returns the category locators in a promised string array
+    
     async getCategoryNames(): Promise<string[]> {
     //await this.page.waitForTimeout(3000);
     const categoryElements = this.page.locator('.category-table tbody tr td:first-child');
@@ -38,6 +39,36 @@ export default class CategoriesPage {
   async verifyCategoryExists(catName: string): Promise<boolean> {
     const categoriesName = await this.getCategoryNames();
     return categoriesName.includes(catName);
+  }
+
+  // Delete the category you just created
+  async deleteCategory(catName: string) {
+    const categoriesName = await this.getCategoryNames();
+    //console.log(categoriesName); only when debugging
+    if (categoriesName.includes(catName)) {
+      const row = this.page.locator('tr', { hasText: catName });
+      await expect(row).toBeVisible();
+      await row.locator('button.delete-btn').click();
+      //confirm the delete popup
+      await expect (this.page.locator('.modal-content')).toBeVisible();
+      await this.page.locator("//button[text()='Delete']").click();
+      await this.page.waitForTimeout(2000);
+    //console.log(`Category "${catName}" deleted.`);
+    } else {
+    console.log(`Category "${catName}" not found, cannot delete.`);
+    }
+  }
+
+  // Verify the category you just created was deleted
+  async confirmDelete(catName: string): Promise<boolean> {
+    const updatedCategoriesName = await this.getCategoryNames();
+    const isDeleted = !updatedCategoriesName.includes(catName)
+    if (isDeleted) {
+      console.log(`Category "${catName}" successfully deleted.`);
+    } else {
+    console.log(`Category "${catName}" not found, cannot delete.`);
+    }
+  return isDeleted;
   }
 
 };

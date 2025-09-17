@@ -8,24 +8,19 @@ export default class CartPage {
        await this.page.fill("#address",'272 S Main Fake St');
        await this.page.fill("#phone",'2987654621');
        await this.page.locator("//button[@class='action-btn white-action-btn']/following-sibling::button[1]").click();
-       expect(this.page.locator("uniqueId")).toContainText('Your order id');
+       const enrollText = await this.page.locator(".uniqueId").innerText();
+       expect(enrollText).toContain('Your order id');
        const orderId = await this.page.locator("//h4[@class='uniqueId']//b[1]").innerText();
        console.log(`Your order is: ${orderId}`);
+       await this.page.locator(".btn-close").click();
     }
     
-    async manageCategories() {
-        //hover over the manage menu
-        await this.page.locator("//div[@class='nav-menu-item-manage']//span[1]").hover();
-        //clicking on manage categories will open a new tab
-        await this.page.locator("(//a[@class='nav-menu-item false'])[2]").click();
+    async goToHome() {
+       await Promise.all([
+            this.page.waitForNavigation(),     
+            this.page.locator("//div[@class='navbar-menu-logo']//img[1]").click()
+        ]);
     }
 
-    async addCourseToCart(){
-        await this.page.locator('.course-card', { hasText: 'play test' }).getByRole('button', { name: 'Add to Cart' }).click();
-    }
-
-    async goToCart(){
-        await this.page.locator("button.cartBtn").click();
-    }
-    
+        
 };

@@ -5,7 +5,7 @@ import { format } from 'date-fns';
 export default class CoursesPage {
     constructor(public page: Page) {}
 
-    async addCourse(catName: string) {
+    async addCourse(catName: string, courseName: string) {
         // Click the "Add New Course" button
         await this.page.locator("//button[normalize-space(text())='Add New Course']").click();
         // Fill the form
@@ -24,7 +24,7 @@ export default class CoursesPage {
         const filePath = path.resolve('C:/Users/fguerrero/Pictures/logo1.jpg');
         await this.page.setInputFiles("//input[@type='file']",filePath);
         // filling text fields
-        await this.page.fill('#name', 'Playwright checkpoint 35');
+        await this.page.fill('#name', courseName);
         await this.page.fill('#description', 'Automation Playwright Adv checkpoint 35');
         await this.page.fill('#instructorNameId', 'Tech Thread');
         await this.page.fill('#price', '9999');
@@ -54,7 +54,8 @@ export default class CoursesPage {
     }
 
     // will get the list of courses 
-    async getCoursesName() {
+    async getCoursesName(courseName: string) {
+        await this.page.locator('.courses-table tbody tr td:nth-child(2)',{ hasText: courseName }).waitFor({ state: 'visible' });
         const courseElements = this.page.locator('.courses-table tbody tr td:nth-child(2)');
         const count = await courseElements.count();
         const names: string[] = [];
@@ -63,22 +64,26 @@ export default class CoursesPage {
             const name = await courseElements.nth(i).innerText();
             names.push(name.trim());
         }
+       // await this.page.waitForSelector('.courses-table tbody tr td:nth-child(2)', { state: 'visible' });
+        //console.log(names); <-- used for debugging only
         return names;
   }
 
   // checks for a specific category and adds it if it doesnt
-  async verifyCourseExists() {
-    await this.page.waitForSelector('.courses-table tbody tr td:nth-child(2)', { state: 'visible' });
-    const coursesName = await this.getCoursesName();
-      if (coursesName.includes('Playwright checkpoint')) {
+  async verifyCourseExists(courseName: string) {
+    //await this.page.waitForSelector('.courses-table tbody tr td:nth-child(2)', { state: 'visible' });
+    const coursesName = await this.getCoursesName(courseName);
+      if (coursesName.some(name => name.includes(courseName))) {
         console.log(`Course is availble.`);
-        await Promise.all([
-            this.page.waitForNavigation(),     
-            this.page.locator("//div[@class='navbar-menu-logo']//img[1]").click()
-        ]);
+        
       }else{
         console.log('Course is not available.');
-              }
+      }
+  }
+
+  async goToHome(){
+    await this.page.locator("//div[@class='navbar-menu-logo']//img[1]").click();
+    await this.page.waitForLoadState('networkidle');
   }
        
 
