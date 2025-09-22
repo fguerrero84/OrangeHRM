@@ -1,8 +1,54 @@
 import { tp_expect, tp_test } from "../base/myFixture";
 import CategoriesPage from "../pageobjects/categoriesPage";
+import CoursesPage from "../pageobjects/coursesPage";
 import * as data from "../testData/login-test-data.json";
+import { format } from 'date-fns';
 
-tp_test('Course E2E', async ({ landingPage, loginPage, homePage, baseURL, coursesPage, cartPage }) => {
+
+tp_test.describe('Authentication Tests', () => {
+  tp_test.beforeEach(async ({ landingPage, loginPage, baseURL }) => {
+    await landingPage.page.goto(baseURL!);
+    await landingPage.selectLogIn();
+    await loginPage.login(data.userID, data.password);
+    
+  });
+  tp_test('Create & Delete new category',async ({ homePage }) => {
+    //Select Manage Categories from the menu
+    const [catPage ] = await Promise.all([
+        homePage.page.context().waitForEvent('page'),
+        homePage.manageCategories()  // Opens a new tab
+    ]);
+    // initializing the categories page because of the new tab it opens
+    const categoriesPage = new CategoriesPage(catPage);
+    const catName = 'DemoPlay';
+    // adding the new category if it doesnt exists
+    await categoriesPage.addCategoryIfNotExists(catName);
+    
+    // Verify newly created category exists
+    const categoryExists = await categoriesPage.verifyCategoryExists(catName);
+    await tp_expect(categoryExists).toBe(true);
+    console.log(`Category "${catName}" exists: ${categoryExists}`);
+
+    await categoriesPage.deleteCategory(catName);
+    const IsDeleted = await categoriesPage.confirmDelete(catName);
+    await tp_expect(IsDeleted).toBe(true);
+    await catPage.close();
+    await homePage.page.waitForTimeout(3000);// not needed but helps you see final glanze
+  })
+
+  tp_test('Create new course',async ({ homePage, coursesPage }) => {
+    // Navigates to Courses page and adds a new course
+    await homePage.manageCourses();
+    const courseName = `Playwright ${format(new Date(), 'yyyy-MM-dd')}`;
+    await coursesPage.manualAddCourse(courseName);
+    await coursesPage.verifyCourseExists(courseName); 
+    await coursesPage.goToHome();
+    await homePage.page.waitForTimeout(3000);// not needed but helps you see final glanze
+  });
+
+});
+
+/* tp_test('Course E2E', async ({ landingPage, loginPage, homePage, baseURL, coursesPage, cartPage }) => {
 
     // navigate to login page  
 await landingPage.page.goto(baseURL!);
@@ -56,4 +102,4 @@ const [catPage ] = await Promise.all([
  await loginPage.page.waitForTimeout(3000);// not needed but helps you see final glanze
 
  
-});
+}); */
