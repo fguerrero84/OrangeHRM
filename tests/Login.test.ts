@@ -2,9 +2,9 @@ import { tp_test, tp_expect } from "../base/myFixture";
 import * as data from "../testData/login-test-data.json";
 
 tp_test.describe('Authentication Tests', () => {
-  tp_test.beforeEach(async ({ landingPage, loginPage, baseURL }) => {
-    await landingPage.page.goto(baseURL!);
-    await landingPage.selectLogIn();
+  tp_test.beforeEach(async ({ loginPage, baseURL }) => {
+    await loginPage.page.goto(baseURL!);
+    //await loginPage.selectLogIn();
     await loginPage.login(data.userID, data.password);
   });
 

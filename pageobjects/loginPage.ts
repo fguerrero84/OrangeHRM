@@ -6,19 +6,19 @@ export default class LoginPage {
 async login(userID:string, password:string) {
     await this.enterEmail(userID);
     await this.enterPassword(password);
-    await this.clickSignIn();
+    await this.clickLogin();
 }
 
 async enterEmail(userID:string) {
-    await this.page.locator('#email1').fill(userID);
+    await this.page.getByRole('textbox', { name: 'Username' }).fill(userID);
 }
 
 async enterPassword(password:string) {
-    await this.page.locator('#password1').fill(password);
+    await this.page.getByRole('textbox', { name: 'Password' }).fill(password);
 }
 
-async clickSignIn() {
-    await this.page.locator("//button[@type='submit']").click();
+async clickLogin() {
+    await this.page.getByRole('button', { name: 'Login' }).click();
 }
 };
 

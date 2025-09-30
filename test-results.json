@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "C:\\Users\\fguerrero\\FreelanceCourseDemo\\freelancer\\playwright.config.ts",
-    "rootDir": "C:/Users/fguerrero/FreelanceCourseDemo/freelancer/tests",
+    "configFile": "C:\\Users\\fguerrero\\OrangeHRM\\playwright.config.ts",
+    "rootDir": "C:/Users/fguerrero/OrangeHRM/tests",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -39,7 +39,7 @@
     "quiet": false,
     "projects": [
       {
-        "outputDir": "C:/Users/fguerrero/FreelanceCourseDemo/freelancer/test-results",
+        "outputDir": "C:/Users/fguerrero/OrangeHRM/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -47,7 +47,7 @@
         },
         "id": "chromium",
         "name": "chromium",
-        "testDir": "C:/Users/fguerrero/FreelanceCourseDemo/freelancer/tests",
+        "testDir": "C:/Users/fguerrero/OrangeHRM/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -64,13 +64,13 @@
   },
   "suites": [
     {
-      "title": "EnrollCourse.test.ts",
-      "file": "EnrollCourse.test.ts",
+      "title": "ClaimsE2E.test.ts",
+      "file": "ClaimsE2E.test.ts",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "Enroll Course",
+          "title": "Submitting a claims and expenses",
           "ok": true,
           "tags": [],
           "tests": [
@@ -82,19 +82,40 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 5,
+                  "workerIndex": 13,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 12625,
+                  "duration": 30198,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "Your order is: order-p55yy\n"
+                      "text": "New claim was created successfully.\n"
+                    },
+                    {
+                      "text": "First Expense added successfully.\n"
+                    },
+                    {
+                      "text": "Second Expense added successfully.\n"
+                    },
+                    {
+                      "text": "Found rows: [ \u001b[32m'150.00'\u001b[39m, \u001b[32m'350.00'\u001b[39m ] → computed total: 500.00\n"
+                    },
+                    {
+                      "text": "✅ Displayed total 500.00 matches computed 500.00\n"
+                    },
+                    {
+                      "text": "Claim successfully Submitted.\n"
+                    },
+                    {
+                      "text": "Claim's Reference Id: 202509290000016\n"
+                    },
+                    {
+                      "text": "✅ Reference Id 202509290000016 found.\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-09-22T17:54:51.320Z",
+                  "startTime": "2025-09-30T01:22:38.852Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -102,8 +123,8 @@
               "status": "expected"
             }
           ],
-          "id": "bca13c91070dc4ee9b5c-75512b3ec006f6d474b4",
-          "file": "EnrollCourse.test.ts",
+          "id": "92d9b7d405bdfb98f5ec-649f7108d2aab4e7fdd5",
+          "file": "ClaimsE2E.test.ts",
           "line": 4,
           "column": 8
         }
@@ -112,8 +133,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-22T17:54:45.487Z",
-    "duration": 23670.268000006676,
+    "startTime": "2025-09-30T01:22:28.768Z",
+    "duration": 64521.59400000051,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

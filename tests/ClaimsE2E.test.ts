@@ -1,14 +1,35 @@
 import { tp_expect, tp_test } from "../base/myFixture";
-import CategoriesPage from "../pageobjects/categoriesPage";
 import * as data from "../testData/login-test-data.json";
 
-tp_test('Course E2E', async ({ landingPage, loginPage, homePage, baseURL, coursesPage, cartPage }) => {
+tp_test('Submitting a claims and expenses', async ({ loginPage, homePage, claimsDetailsPage, claimsPage, baseURL }) => {
 
-    // navigate to login page  
-await landingPage.page.goto(baseURL!);
-await landingPage.selectLogIn();
+    // navigate to login page  & login
+    await loginPage.page.goto(baseURL!);
+    await loginPage.login(data.userID, data.password);
+    //navigate to claims page
+    await homePage.navigateToClaims();
+    //create new claim
+    const employee = 'Fernando Guerrero';
+    await claimsPage.addClaim(employee);
+    // navigates to claim details page
+    //await claimsPage.viewExpensesDetails(employee);
+    // add the expenses & confirm total amount
+    await claimsDetailsPage.addFirstExpense();
+    await claimsDetailsPage.addSecondExpense();
+    await claimsDetailsPage.confirmTotalAmount();
+    const referenceId = await claimsDetailsPage.submitClaim();
+    await claimsDetailsPage.navigateToClaimsPage();
+    await claimsPage.verifyClaimExists(referenceId);
 
-// login to the application
+
+
+
+
+
+
+});
+
+/* // login to the application
 await loginPage.login(data.userID, data.password);
 
 //Select Manage Categories from the menu
@@ -56,4 +77,4 @@ const [catPage ] = await Promise.all([
  await loginPage.page.waitForTimeout(3000);// not needed but helps you see final glanze
 
  
-});
+}); */

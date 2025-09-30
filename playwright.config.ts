@@ -9,7 +9,7 @@ export default defineConfig({
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        baseURL: 'https://freelance-learn-automation.vercel.app/',
+        baseURL: 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login',
         screenshot: 'only-on-failure',
         video: 'retain-on-failure',
         headless: false,

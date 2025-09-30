@@ -1,31 +1,16 @@
-import { Page } from '@playwright/test';
+import { Page, Locator } from '@playwright/test';
 
 export default class HomePage {
-    constructor(public page: Page) {}
+    readonly claimLnk: Locator;
 
-    async manageCourses() {
-        //hover over the manage menu
-        await this.page.locator("//div[@class='nav-menu-item-manage']//span[1]").hover();
-        //click on manage courses
-        await this.page.locator("(//a[@class='nav-menu-item false'])[1]").click();
-    }
-    
-    async manageCategories() {
-        //hover over the manage menu
-        await this.page.locator("//div[@class='nav-menu-item-manage']//span[1]").hover();
-        //clicking on manage categories will open a new tab
-        await this.page.locator("(//a[@class='nav-menu-item false'])[2]").click();
-    }
+    constructor(public page: Page) {
+        this.claimLnk = page.getByRole('link', { name: 'Claim' });
+     }
 
-    async addCourseToCart(courseName: string){
-        await this.page.locator('.course-card', { hasText: courseName }).getByRole('button', { name: 'Add to Cart' }).click();
+    async navigateToClaims(): Promise<void> {
+        await this.claimLnk.click();
+        await this.page.waitForTimeout(2000);
     }
+   
 
-    async addFirstCourseToCart(){
-        await this.page.locator('.home-container .course-card.row').first().locator('button:has-text("Add to Cart")').click();
-    }
-    async goToCart(){
-        await this.page.locator("button.cartBtn").click();
-    }
-    
 };
