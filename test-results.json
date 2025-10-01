@@ -16,6 +16,10 @@
     "preserveOutput": "always",
     "reporter": [
       [
+        "C:\\Users\\fguerrero\\OrangeHRM\\node_modules\\allure-playwright\\dist\\cjs\\index.js",
+        null
+      ],
+      [
         "dot",
         null
       ],
@@ -70,7 +74,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Submitting a claims and expenses",
+          "title": "Submitting a claim and expenses",
           "ok": true,
           "tags": [],
           "tests": [
@@ -82,12 +86,15 @@
               "projectName": "chromium",
               "results": [
                 {
-                  "workerIndex": 13,
+                  "workerIndex": 6,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 30198,
+                  "duration": 33551,
                   "errors": [],
                   "stdout": [
+                    {
+                      "text": "Employee added successfully.\n"
+                    },
                     {
                       "text": "New claim was created successfully.\n"
                     },
@@ -107,15 +114,15 @@
                       "text": "Claim successfully Submitted.\n"
                     },
                     {
-                      "text": "Claim's Reference Id: 202509290000016\n"
+                      "text": "Claim's Reference Id: 202509300000010\n"
                     },
                     {
-                      "text": "✅ Reference Id 202509290000016 found.\n"
+                      "text": "✅ Reference Id 202509300000010 found.\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-09-30T01:22:38.852Z",
+                  "startTime": "2025-09-30T18:31:04.223Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -123,7 +130,7 @@
               "status": "expected"
             }
           ],
-          "id": "92d9b7d405bdfb98f5ec-649f7108d2aab4e7fdd5",
+          "id": "92d9b7d405bdfb98f5ec-02cf573e70d6ef9ef3b8",
           "file": "ClaimsE2E.test.ts",
           "line": 4,
           "column": 8
@@ -133,8 +140,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-09-30T01:22:28.768Z",
-    "duration": 64521.59400000051,
+    "startTime": "2025-09-30T18:30:52.760Z",
+    "duration": 70916.47200000007,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

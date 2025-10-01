@@ -1,0 +1,50 @@
+❌ Reference Id not found page.waitForSelector: Test timeout of 30000ms exceeded.
+Call log:
+  - waiting for locator('//div[normalize-space(text())="202509300000008"]') to be visible
+
+    at ClaimsPage.verifyClaimExists (C:\Users\fguerrero\OrangeHRM\pageobjects\claimsPage.ts:46:27)
+    at C:\Users\fguerrero\OrangeHRM\tests\ClaimsE2E.test.ts:25:22 {
+  [Symbol(step)]: {
+    location: {
+      file: 'C:\\Users\\fguerrero\\OrangeHRM\\pageobjects\\claimsPage.ts',
+      line: 46,
+      column: 27,
+      function: 'ClaimsPage.verifyClaimExists'
+    },
+    category: 'pw:api',
+    title: `Wait for selector locator('//div[normalize-space(text())="202509300000008"]')`,
+    apiName: 'page.waitForSelector',
+    params: {
+      selector: '//div[normalize-space(text())="202509300000008"]',
+      timeout: 5000
+    },
+    group: undefined,
+    stepId: 'pw:api@97',
+    boxedStack: undefined,
+    steps: [],
+    attachmentIndices: [],
+    info: TestStepInfoImpl {
+      annotations: [],
+      _testInfo: [TestInfoImpl],
+      _stepId: 'pw:api@97',
+      _title: `Wait for selector locator('//div[normalize-space(text())="202509300000008"]')`,
+      _parentStep: [TestStepInfoImpl],
+      skip: [Function (anonymous)]
+    },
+    recoverFromStepError: [AsyncFunction: recoverFromStepError],
+    complete: [Function: complete],
+    endWallTime: 1759256656884,
+    error: {
+      message: 'Error: page.waitForSelector: Test timeout of 30000ms exceeded.\n' +
+        'Call log:\n' +
+        `\x1B[2m  - waiting for locator('//div[normalize-space(text())="202509300000008"]') to be visible\x1B[22m\n`,
+      stack: 'Error: page.waitForSelector: Test timeout of 30000ms exceeded.\n' +
+        'Call log:\n' +
+        `\x1B[2m  - waiting for locator('//div[normalize-space(text())="202509300000008"]') to be visible\x1B[22m\n` +
+        '\n' +
+        '    at ClaimsPage.verifyClaimExists (C:\\Users\\fguerrero\\OrangeHRM\\pageobjects\\claimsPage.ts:46:27)\n' +
+        '    at C:\\Users\\fguerrero\\OrangeHRM\\tests\\ClaimsE2E.test.ts:25:22',
+      cause: undefined
+    }
+  }
+}

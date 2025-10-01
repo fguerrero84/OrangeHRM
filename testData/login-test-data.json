@@ -1,7 +1,10 @@
 {
 
     "userID": "Admin",
-    "password": "admin123"
+    "password": "admin123",
+    "name": "Fernando",
+    "lastname": "Guerrero",
+    "employee": "Fernando Guerrero"
 
 
 }

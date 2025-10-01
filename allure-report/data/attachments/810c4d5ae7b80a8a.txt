@@ -1,0 +1,7 @@
+New claim was created successfully.
+First Expense added successfully.
+Second Expense added successfully.
+Found rows: [ '150.00', '350.00' ] → computed total: 500.00
+✅ Displayed total 500.00 matches computed 500.00
+Claim successfully Submitted.
+Claim's Reference Id: 202509300000010

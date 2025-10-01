@@ -21,7 +21,7 @@ export default defineConfig({
       },
     },
   ],
-  reporter: [['dot'], ['json', { outputFile: 'test-results.json' }], ['html', { open: 'never' }]],
+  reporter: [['allure-playwright'],['dot'], ['json', { outputFile: 'test-results.json' }], ['html', { open: 'never' }]],
 });
 
 

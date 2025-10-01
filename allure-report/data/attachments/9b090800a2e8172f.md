@@ -1,0 +1,141 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic:
+    - complementary [ref=e4]:
+      - navigation "Sidepanel" [ref=e5]:
+        - generic [ref=e6]:
+          - link "client brand banner" [ref=e7] [cursor=pointer]:
+            - /url: https://www.orangehrm.com/
+            - img "client brand banner" [ref=e9] [cursor=pointer]
+          - text: 
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - textbox "Search" [ref=e15]
+              - button "" [ref=e16] [cursor=pointer]:
+                - generic [ref=e17] [cursor=pointer]: 
+            - separator [ref=e18]
+          - list [ref=e19]:
+            - listitem [ref=e20]:
+              - link "Admin" [ref=e21] [cursor=pointer]:
+                - /url: /web/index.php/admin/viewAdminModule
+                - generic [ref=e24] [cursor=pointer]: Admin
+            - listitem [ref=e25]:
+              - link "PIM" [ref=e26] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewPimModule
+                - generic [ref=e40] [cursor=pointer]: PIM
+            - listitem [ref=e41]:
+              - link "Leave" [ref=e42] [cursor=pointer]:
+                - /url: /web/index.php/leave/viewLeaveModule
+                - generic [ref=e45] [cursor=pointer]: Leave
+            - listitem [ref=e46]:
+              - link "Time" [ref=e47] [cursor=pointer]:
+                - /url: /web/index.php/time/viewTimeModule
+                - generic [ref=e53] [cursor=pointer]: Time
+            - listitem [ref=e54]:
+              - link "Recruitment" [ref=e55] [cursor=pointer]:
+                - /url: /web/index.php/recruitment/viewRecruitmentModule
+                - generic [ref=e61] [cursor=pointer]: Recruitment
+            - listitem [ref=e62]:
+              - link "My Info" [ref=e63] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewMyDetails
+                - generic [ref=e69] [cursor=pointer]: My Info
+            - listitem [ref=e70]:
+              - link "Performance" [ref=e71] [cursor=pointer]:
+                - /url: /web/index.php/performance/viewPerformanceModule
+                - generic [ref=e79] [cursor=pointer]: Performance
+            - listitem [ref=e80]:
+              - link "Dashboard" [ref=e81] [cursor=pointer]:
+                - /url: /web/index.php/dashboard/index
+                - generic [ref=e84] [cursor=pointer]: Dashboard
+            - listitem [ref=e85]:
+              - link "Directory" [ref=e86] [cursor=pointer]:
+                - /url: /web/index.php/directory/viewDirectory
+                - generic [ref=e89] [cursor=pointer]: Directory
+            - listitem [ref=e90]:
+              - link "Maintenance" [ref=e91] [cursor=pointer]:
+                - /url: /web/index.php/maintenance/viewMaintenanceModule
+                - generic [ref=e95] [cursor=pointer]: Maintenance
+            - listitem [ref=e96]:
+              - link "Claim" [ref=e97] [cursor=pointer]:
+                - /url: /web/index.php/claim/viewClaimModule
+                - img [ref=e100] [cursor=pointer]
+                - generic [ref=e104] [cursor=pointer]: Claim
+            - listitem [ref=e105]:
+              - link "Buzz" [ref=e106] [cursor=pointer]:
+                - /url: /web/index.php/buzz/viewBuzz
+                - generic [ref=e109] [cursor=pointer]: Buzz
+    - banner [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - text: 
+          - heading "Claim" [level=6] [ref=e114]
+        - link "Upgrade" [ref=e116]:
+          - /url: https://orangehrm.com/open-source/upgrade-to-advanced
+          - button "Upgrade" [ref=e117] [cursor=pointer]: Upgrade
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - generic [ref=e125] [cursor=pointer]:
+              - img "profile picture" [ref=e126] [cursor=pointer]
+              - paragraph [ref=e127] [cursor=pointer]: John@123 loil
+              - generic [ref=e128] [cursor=pointer]: 
+      - navigation "Topbar Menu" [ref=e130]:
+        - list [ref=e131]:
+          - listitem [ref=e132] [cursor=pointer]:
+            - generic [ref=e133] [cursor=pointer]:
+              - text: Configuration
+              - generic [ref=e134] [cursor=pointer]: 
+          - listitem [ref=e135] [cursor=pointer]:
+            - link "Submit Claim" [ref=e136] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e137] [cursor=pointer]:
+            - link "My Claims" [ref=e138] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e139] [cursor=pointer]:
+            - link "Employee Claims" [ref=e140] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e141] [cursor=pointer]:
+            - link "Assign Claim" [ref=e142] [cursor=pointer]:
+              - /url: "#"
+          - button "" [ref=e144] [cursor=pointer]:
+            - generic [ref=e145] [cursor=pointer]: 
+  - generic [ref=e146]:
+    - generic [ref=e149]:
+      - heading "Create Claim Request" [level=6] [ref=e150]
+      - separator [ref=e151]
+      - generic [ref=e152]:
+        - generic [ref=e156]:
+          - generic [ref=e158]: Employee Name*
+          - generic [ref=e160]:
+            - textbox "Type for hints..." [active] [ref=e162]: Fernando Guerrero
+            - listbox [ref=e163]:
+              - option "No Records Found" [ref=e164] [cursor=pointer]
+        - generic [ref=e166]:
+          - generic [ref=e168]:
+            - generic [ref=e170]: Event*
+            - generic [ref=e173] [cursor=pointer]:
+              - generic [ref=e174] [cursor=pointer]: "-- Select --"
+              - generic [ref=e176] [cursor=pointer]: 
+          - generic [ref=e178]:
+            - generic [ref=e180]: Currency*
+            - generic [ref=e183] [cursor=pointer]:
+              - generic [ref=e184] [cursor=pointer]: "-- Select --"
+              - generic [ref=e186] [cursor=pointer]: 
+        - generic [ref=e190]:
+          - generic [ref=e192]: Remarks
+          - textbox [ref=e194]
+        - separator [ref=e195]
+        - generic [ref=e196]:
+          - paragraph [ref=e197]: "* Required"
+          - button "Cancel" [ref=e198] [cursor=pointer]
+          - button "Create" [ref=e199] [cursor=pointer]
+    - generic [ref=e200]:
+      - paragraph [ref=e201]: OrangeHRM OS 5.7
+      - paragraph [ref=e202]:
+        - text: © 2005 - 2025
+        - link "OrangeHRM, Inc" [ref=e203] [cursor=pointer]:
+          - /url: http://www.orangehrm.com
+        - text: . All rights reserved.
+```

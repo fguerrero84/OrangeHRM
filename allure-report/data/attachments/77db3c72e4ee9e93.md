@@ -1,0 +1,222 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - generic:
+      - complementary [ref=e4]:
+        - navigation "Sidepanel" [ref=e5]:
+          - generic [ref=e6]:
+            - link "client brand banner" [ref=e7] [cursor=pointer]:
+              - /url: https://www.orangehrm.com/
+              - img "client brand banner" [ref=e9] [cursor=pointer]
+            - text: 
+          - generic [ref=e10]:
+            - generic [ref=e11]:
+              - generic [ref=e12]:
+                - textbox "Search" [ref=e15]
+                - button "" [ref=e16] [cursor=pointer]:
+                  - generic [ref=e17] [cursor=pointer]: 
+              - separator [ref=e18]
+            - list [ref=e19]:
+              - listitem [ref=e20]:
+                - link "Admin" [ref=e21] [cursor=pointer]:
+                  - /url: /web/index.php/admin/viewAdminModule
+                  - generic [ref=e24] [cursor=pointer]: Admin
+              - listitem [ref=e25]:
+                - link "PIM" [ref=e26] [cursor=pointer]:
+                  - /url: /web/index.php/pim/viewPimModule
+                  - generic [ref=e40] [cursor=pointer]: PIM
+              - listitem [ref=e41]:
+                - link "Leave" [ref=e42] [cursor=pointer]:
+                  - /url: /web/index.php/leave/viewLeaveModule
+                  - generic [ref=e45] [cursor=pointer]: Leave
+              - listitem [ref=e46]:
+                - link "Time" [ref=e47] [cursor=pointer]:
+                  - /url: /web/index.php/time/viewTimeModule
+                  - generic [ref=e53] [cursor=pointer]: Time
+              - listitem [ref=e54]:
+                - link "Recruitment" [ref=e55] [cursor=pointer]:
+                  - /url: /web/index.php/recruitment/viewRecruitmentModule
+                  - generic [ref=e61] [cursor=pointer]: Recruitment
+              - listitem [ref=e62]:
+                - link "My Info" [ref=e63] [cursor=pointer]:
+                  - /url: /web/index.php/pim/viewMyDetails
+                  - generic [ref=e69] [cursor=pointer]: My Info
+              - listitem [ref=e70]:
+                - link "Performance" [ref=e71] [cursor=pointer]:
+                  - /url: /web/index.php/performance/viewPerformanceModule
+                  - generic [ref=e79] [cursor=pointer]: Performance
+              - listitem [ref=e80]:
+                - link "Dashboard" [ref=e81] [cursor=pointer]:
+                  - /url: /web/index.php/dashboard/index
+                  - generic [ref=e84] [cursor=pointer]: Dashboard
+              - listitem [ref=e85]:
+                - link "Directory" [ref=e86] [cursor=pointer]:
+                  - /url: /web/index.php/directory/viewDirectory
+                  - generic [ref=e89] [cursor=pointer]: Directory
+              - listitem [ref=e90]:
+                - link "Maintenance" [ref=e91] [cursor=pointer]:
+                  - /url: /web/index.php/maintenance/viewMaintenanceModule
+                  - generic [ref=e95] [cursor=pointer]: Maintenance
+              - listitem [ref=e96]:
+                - link "Claim" [ref=e97] [cursor=pointer]:
+                  - /url: /web/index.php/claim/viewClaimModule
+                  - img [ref=e100] [cursor=pointer]
+                  - generic [ref=e104] [cursor=pointer]: Claim
+              - listitem [ref=e105]:
+                - link "Buzz" [ref=e106] [cursor=pointer]:
+                  - /url: /web/index.php/buzz/viewBuzz
+                  - generic [ref=e109] [cursor=pointer]: Buzz
+      - banner [ref=e110]:
+        - generic [ref=e111]:
+          - generic [ref=e112]:
+            - text: 
+            - heading "Claim" [level=6] [ref=e114]
+          - link "Upgrade" [ref=e116]:
+            - /url: https://orangehrm.com/open-source/upgrade-to-advanced
+            - button "Upgrade" [ref=e117] [cursor=pointer]: Upgrade
+          - list [ref=e123]:
+            - listitem [ref=e124]:
+              - generic [ref=e125] [cursor=pointer]:
+                - img "profile picture" [ref=e126] [cursor=pointer]
+                - paragraph [ref=e127] [cursor=pointer]: Andrew de Souza
+                - generic [ref=e128] [cursor=pointer]: 
+        - navigation "Topbar Menu" [ref=e130]:
+          - list [ref=e131]:
+            - listitem [ref=e132] [cursor=pointer]:
+              - generic [ref=e133] [cursor=pointer]:
+                - text: Configuration
+                - generic [ref=e134] [cursor=pointer]: 
+            - listitem [ref=e135] [cursor=pointer]:
+              - link "Submit Claim" [ref=e136] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e137] [cursor=pointer]:
+              - link "My Claims" [ref=e138] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e139] [cursor=pointer]:
+              - link "Employee Claims" [ref=e140] [cursor=pointer]:
+                - /url: "#"
+            - listitem [ref=e141] [cursor=pointer]:
+              - link "Assign Claim" [ref=e142] [cursor=pointer]:
+                - /url: "#"
+            - button "" [ref=e144] [cursor=pointer]:
+              - generic [ref=e145] [cursor=pointer]: 
+    - generic [ref=e146]:
+      - generic [ref=e149]:
+        - generic [ref=e150]:
+          - heading "Assign Claim" [level=6] [ref=e151]
+          - separator [ref=e152]
+          - generic [ref=e153]:
+            - generic [ref=e157]:
+              - generic [ref=e159]: Employee
+              - textbox [disabled] [ref=e161]: Fernando Guerrero
+            - generic [ref=e163]:
+              - generic [ref=e165]:
+                - generic [ref=e167]: Reference Id
+                - textbox [disabled] [ref=e169]: "202509300000009"
+              - generic [ref=e171]:
+                - generic [ref=e173]: Event
+                - textbox [disabled] [ref=e175]: Medical Reimbursement
+              - generic [ref=e177]:
+                - generic [ref=e179]: Status
+                - textbox [disabled] [ref=e181]: Initiated
+            - generic [ref=e185]:
+              - generic [ref=e187]: Currency
+              - textbox [disabled] [ref=e189]: Euro
+            - generic [ref=e193]:
+              - generic [ref=e195]: Remarks
+              - textbox [disabled] [ref=e197]
+        - separator [ref=e198]
+        - generic [ref=e200]:
+          - heading "Expenses" [level=6] [ref=e201]
+          - button " Add" [ref=e202] [cursor=pointer]:
+            - generic [ref=e203] [cursor=pointer]: 
+            - text: Add
+        - generic [ref=e204]:
+          - separator [ref=e205]
+          - generic [ref=e207]: No Records Found
+        - table [ref=e209]:
+          - rowgroup [ref=e210]:
+            - row " Expense Type Date Note Amount (Euro) Actions" [ref=e211]:
+              - columnheader "" [ref=e212]:
+                - generic [ref=e214] [cursor=pointer]:
+                  - checkbox "" [ref=e215]
+                  - generic [ref=e217] [cursor=pointer]: 
+              - columnheader "Expense Type" [ref=e218]
+              - columnheader "Date" [ref=e219]
+              - columnheader "Note" [ref=e220]
+              - columnheader "Amount (Euro)" [ref=e221]
+              - columnheader "Actions" [ref=e222]
+          - rowgroup
+        - paragraph [ref=e224]: "Total Amount (Euro) : 0.00"
+        - dialog [ref=e225]:
+          - document [ref=e228]:
+            - button "×" [ref=e229] [cursor=pointer]
+            - paragraph [ref=e231]: Add Expense
+            - separator [ref=e232]
+            - generic [ref=e233]:
+              - generic [ref=e240]:
+                - generic [ref=e242]: Expense Type*
+                - generic [ref=e245] [cursor=pointer]:
+                  - generic [ref=e246] [cursor=pointer]: Transport
+                  - generic [ref=e248] [cursor=pointer]: 
+              - generic [ref=e250]:
+                - generic [ref=e252]:
+                  - generic [ref=e254]: Date*
+                  - generic [ref=e257]:
+                    - textbox "yyyy-dd-mm" [ref=e258]: 2025-16-09
+                    - generic [ref=e259] [cursor=pointer]: 
+                - generic [ref=e261]:
+                  - generic [ref=e263]: Amount*
+                  - textbox [ref=e265]: "150"
+              - generic [ref=e269]:
+                - generic [ref=e271]: Note
+                - textbox [ref=e273]
+              - separator [ref=e274]
+              - generic [ref=e275]:
+                - paragraph [ref=e276]: "* Required"
+                - button "Cancel" [ref=e277] [cursor=pointer]
+                - button "Save" [active] [ref=e278] [cursor=pointer]
+        - separator [ref=e279]
+        - generic [ref=e281]:
+          - heading "Attachments" [level=6] [ref=e282]
+          - button " Add" [ref=e283] [cursor=pointer]:
+            - generic [ref=e284] [cursor=pointer]: 
+            - text: Add
+        - generic [ref=e285]:
+          - separator [ref=e286]
+          - generic [ref=e288]: No Records Found
+        - table [ref=e290]:
+          - rowgroup [ref=e291]:
+            - row " File Name Description Size Type Date Added Added By Actions" [ref=e292]:
+              - columnheader "" [ref=e293]:
+                - generic [ref=e295] [cursor=pointer]:
+                  - checkbox "" [ref=e296]
+                  - generic [ref=e298] [cursor=pointer]: 
+              - columnheader "File Name" [ref=e299]
+              - columnheader "Description" [ref=e300]
+              - columnheader "Size" [ref=e301]
+              - columnheader "Type" [ref=e302]
+              - columnheader "Date Added" [ref=e303]
+              - columnheader "Added By" [ref=e304]
+              - columnheader "Actions" [ref=e305]
+          - rowgroup
+        - generic [ref=e306]:
+          - button "Back" [ref=e307] [cursor=pointer]
+          - button "Submit" [ref=e308] [cursor=pointer]
+      - generic [ref=e309]:
+        - paragraph [ref=e310]: OrangeHRM OS 5.7
+        - paragraph [ref=e311]:
+          - text: © 2005 - 2025
+          - link "OrangeHRM, Inc" [ref=e312] [cursor=pointer]:
+            - /url: http://www.orangehrm.com
+          - text: . All rights reserved.
+  - generic [ref=e314] [cursor=pointer]:
+    - generic [ref=e315] [cursor=pointer]:
+      - generic [ref=e318] [cursor=pointer]: 
+      - generic [ref=e319] [cursor=pointer]:
+        - paragraph [ref=e320] [cursor=pointer]: Success
+        - paragraph [ref=e321] [cursor=pointer]: Successfully Saved
+    - button "×" [ref=e323] [cursor=pointer]
+```

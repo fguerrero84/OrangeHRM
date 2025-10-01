@@ -1,0 +1,2 @@
+New claim was created successfully.
+First Expense added successfully.

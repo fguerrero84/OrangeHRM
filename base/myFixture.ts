@@ -3,6 +3,7 @@ import LoginPage from '../pageobjects/loginPage';
 import HomePage from '../pageobjects/homePage';
 import ClaimsDetailsPage from '../pageobjects/claimsDetailsPage';
 import ClaimsPage from '../pageobjects/claimsPage';
+import PimPage from '../pageobjects/pimPage';
 
 
 type pages = {
@@ -10,6 +11,7 @@ type pages = {
     homePage: HomePage;
     claimsDetailsPage: ClaimsDetailsPage;
     claimsPage: ClaimsPage;
+    pimPage: PimPage;
 };
 
 const testPages = baseTest.extend<pages>({
@@ -25,6 +27,9 @@ const testPages = baseTest.extend<pages>({
     },
     claimsPage: async ({ page }, use) => {
         await use (new ClaimsPage(page)); 
+    },
+    pimPage: async ({ page }, use) => {
+        await use (new PimPage(page)); 
     },
 
 });

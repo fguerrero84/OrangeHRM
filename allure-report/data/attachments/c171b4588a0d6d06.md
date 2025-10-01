@@ -1,0 +1,268 @@
+# Page snapshot
+
+```yaml
+- generic [ref=e3]:
+  - generic:
+    - complementary [ref=e4]:
+      - navigation "Sidepanel" [ref=e5]:
+        - generic [ref=e6]:
+          - link "client brand banner" [ref=e7] [cursor=pointer]:
+            - /url: https://www.orangehrm.com/
+            - img "client brand banner" [ref=e9] [cursor=pointer]
+          - text: 
+        - generic [ref=e10]:
+          - generic [ref=e11]:
+            - generic [ref=e12]:
+              - textbox "Search" [ref=e15]
+              - button "" [ref=e16] [cursor=pointer]:
+                - generic [ref=e17] [cursor=pointer]: 
+            - separator [ref=e18]
+          - list [ref=e19]:
+            - listitem [ref=e20]:
+              - link "Admin" [ref=e21] [cursor=pointer]:
+                - /url: /web/index.php/admin/viewAdminModule
+                - generic [ref=e24] [cursor=pointer]: Admin
+            - listitem [ref=e25]:
+              - link "PIM" [ref=e26] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewPimModule
+                - generic [ref=e40] [cursor=pointer]: PIM
+            - listitem [ref=e41]:
+              - link "Leave" [ref=e42] [cursor=pointer]:
+                - /url: /web/index.php/leave/viewLeaveModule
+                - generic [ref=e45] [cursor=pointer]: Leave
+            - listitem [ref=e46]:
+              - link "Time" [ref=e47] [cursor=pointer]:
+                - /url: /web/index.php/time/viewTimeModule
+                - generic [ref=e53] [cursor=pointer]: Time
+            - listitem [ref=e54]:
+              - link "Recruitment" [ref=e55] [cursor=pointer]:
+                - /url: /web/index.php/recruitment/viewRecruitmentModule
+                - generic [ref=e61] [cursor=pointer]: Recruitment
+            - listitem [ref=e62]:
+              - link "My Info" [ref=e63] [cursor=pointer]:
+                - /url: /web/index.php/pim/viewMyDetails
+                - generic [ref=e69] [cursor=pointer]: My Info
+            - listitem [ref=e70]:
+              - link "Performance" [ref=e71] [cursor=pointer]:
+                - /url: /web/index.php/performance/viewPerformanceModule
+                - generic [ref=e79] [cursor=pointer]: Performance
+            - listitem [ref=e80]:
+              - link "Dashboard" [ref=e81] [cursor=pointer]:
+                - /url: /web/index.php/dashboard/index
+                - generic [ref=e84] [cursor=pointer]: Dashboard
+            - listitem [ref=e85]:
+              - link "Directory" [ref=e86] [cursor=pointer]:
+                - /url: /web/index.php/directory/viewDirectory
+                - generic [ref=e89] [cursor=pointer]: Directory
+            - listitem [ref=e90]:
+              - link "Maintenance" [ref=e91] [cursor=pointer]:
+                - /url: /web/index.php/maintenance/viewMaintenanceModule
+                - generic [ref=e95] [cursor=pointer]: Maintenance
+            - listitem [ref=e96]:
+              - link "Claim" [ref=e97] [cursor=pointer]:
+                - /url: /web/index.php/claim/viewClaimModule
+                - img [ref=e100] [cursor=pointer]
+                - generic [ref=e104] [cursor=pointer]: Claim
+            - listitem [ref=e105]:
+              - link "Buzz" [ref=e106] [cursor=pointer]:
+                - /url: /web/index.php/buzz/viewBuzz
+                - generic [ref=e109] [cursor=pointer]: Buzz
+    - banner [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]:
+          - text: 
+          - heading "Claim" [level=6] [ref=e114]
+        - link "Upgrade" [ref=e116]:
+          - /url: https://orangehrm.com/open-source/upgrade-to-advanced
+          - button "Upgrade" [ref=e117] [cursor=pointer]: Upgrade
+        - list [ref=e123]:
+          - listitem [ref=e124]:
+            - generic [ref=e125] [cursor=pointer]:
+              - img "profile picture" [ref=e126] [cursor=pointer]
+              - paragraph [ref=e127] [cursor=pointer]: John@123 loil
+              - generic [ref=e128] [cursor=pointer]: 
+      - navigation "Topbar Menu" [ref=e130]:
+        - list [ref=e131]:
+          - listitem [ref=e132] [cursor=pointer]:
+            - generic [ref=e133] [cursor=pointer]:
+              - text: Configuration
+              - generic [ref=e134] [cursor=pointer]: 
+          - listitem [ref=e135] [cursor=pointer]:
+            - link "Submit Claim" [ref=e136] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e137] [cursor=pointer]:
+            - link "My Claims" [ref=e138] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e139] [cursor=pointer]:
+            - link "Employee Claims" [ref=e140] [cursor=pointer]:
+              - /url: "#"
+          - listitem [ref=e141] [cursor=pointer]:
+            - link "Assign Claim" [ref=e142] [cursor=pointer]:
+              - /url: "#"
+          - button "" [ref=e144] [cursor=pointer]:
+            - generic [ref=e145] [cursor=pointer]: 
+  - generic [ref=e146]:
+    - generic [ref=e147]:
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - heading "Employee Claims" [level=5] [ref=e151]
+          - button "" [ref=e154] [cursor=pointer]:
+            - generic [ref=e155] [cursor=pointer]: 
+        - separator [ref=e156]
+        - generic [ref=e158]:
+          - generic [ref=e160]:
+            - generic [ref=e162]:
+              - generic [ref=e164]: Employee Name
+              - textbox "Type for hints..." [ref=e168]
+            - generic [ref=e170]:
+              - generic [ref=e172]: Reference Id
+              - textbox "Type for hints..." [ref=e176]
+            - generic [ref=e178]:
+              - generic [ref=e180]: Event Name
+              - generic [ref=e183] [cursor=pointer]:
+                - generic [ref=e184] [cursor=pointer]: "-- Select --"
+                - generic [ref=e186] [cursor=pointer]: 
+            - generic [ref=e188]:
+              - generic [ref=e190]: Status
+              - generic [ref=e193] [cursor=pointer]:
+                - generic [ref=e194] [cursor=pointer]: "-- Select --"
+                - generic [ref=e196] [cursor=pointer]: 
+          - generic [ref=e198]:
+            - generic [ref=e200]:
+              - generic [ref=e202]: From Date
+              - generic [ref=e205]:
+                - textbox "yyyy-dd-mm" [ref=e206]
+                - generic [ref=e207] [cursor=pointer]: 
+            - generic [ref=e209]:
+              - generic [ref=e211]: To Date
+              - generic [ref=e214]:
+                - textbox "yyyy-dd-mm" [ref=e215]
+                - generic [ref=e216] [cursor=pointer]: 
+            - generic [ref=e218]:
+              - generic [ref=e220]: Include
+              - generic [ref=e223] [cursor=pointer]:
+                - generic [ref=e224] [cursor=pointer]: Current Employees Only
+                - generic [ref=e226] [cursor=pointer]: 
+          - separator [ref=e227]
+          - generic [ref=e228]:
+            - button "Reset" [ref=e229] [cursor=pointer]
+            - button "Search" [ref=e230] [cursor=pointer]
+      - generic [ref=e231]:
+        - button " Assign Claim" [ref=e233] [cursor=pointer]:
+          - generic [ref=e234] [cursor=pointer]: 
+          - text: Assign Claim
+        - generic [ref=e235]:
+          - separator [ref=e236]
+          - generic [ref=e238]: (4) Records Found
+        - table [ref=e240]:
+          - rowgroup [ref=e241]:
+            - row "Reference Id  Employee Name  Event Name  Description Currency Submitted Date  Status  Amount Actions" [ref=e242]:
+              - columnheader "Reference Id " [ref=e243]:
+                - text: Reference Id
+                - generic [ref=e244]:
+                  - generic [ref=e245] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Employee Name " [ref=e246]:
+                - text: Employee Name
+                - generic [ref=e247]:
+                  - generic [ref=e248] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Event Name " [ref=e249]:
+                - text: Event Name
+                - generic [ref=e250]:
+                  - generic [ref=e251] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Description" [ref=e252]
+              - columnheader "Currency" [ref=e253]
+              - columnheader "Submitted Date " [ref=e254]:
+                - text: Submitted Date
+                - generic [ref=e255]:
+                  - generic [ref=e256] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Status " [ref=e257]:
+                - text: Status
+                - generic [ref=e258]:
+                  - generic [ref=e259] [cursor=pointer]: 
+                  - text:  
+              - columnheader "Amount" [ref=e260]
+              - columnheader "Actions" [ref=e261]
+          - rowgroup [ref=e262]:
+            - row "202509300000008 Fernando Guerrero Medical Reimbursement Euro 2025-30-09 Paid 500.00 View Details" [ref=e264]:
+              - cell "202509300000008" [ref=e265]:
+                - generic [ref=e266]: "202509300000008"
+              - cell "Fernando Guerrero" [ref=e267]:
+                - generic [ref=e268]: Fernando Guerrero
+              - cell "Medical Reimbursement" [ref=e269]:
+                - generic [ref=e271]: Medical Reimbursement
+              - cell [ref=e272]
+              - cell "Euro" [ref=e273]:
+                - generic [ref=e274]: Euro
+              - cell "2025-30-09" [ref=e275]:
+                - generic [ref=e276]: 2025-30-09
+              - cell "Paid" [ref=e277]:
+                - generic [ref=e278]: Paid
+              - cell "500.00" [ref=e279]:
+                - generic [ref=e280]: "500.00"
+              - cell "View Details" [ref=e281]:
+                - button "View Details" [ref=e283] [cursor=pointer]
+            - row "202307180000003 John@123 loil Travel Allowance Algerian Dinar 2023-18-07 Submitted 7,300.32 View Details" [ref=e285]:
+              - cell "202307180000003" [ref=e286]:
+                - generic [ref=e287]: "202307180000003"
+              - cell "John@123 loil" [ref=e288]:
+                - generic [ref=e289]: John@123 loil
+              - cell "Travel Allowance" [ref=e290]:
+                - generic [ref=e292]: Travel Allowance
+              - cell [ref=e293]
+              - cell "Algerian Dinar" [ref=e294]:
+                - generic [ref=e295]: Algerian Dinar
+              - cell "2023-18-07" [ref=e296]:
+                - generic [ref=e297]: 2023-18-07
+              - cell "Submitted" [ref=e298]:
+                - generic [ref=e299]: Submitted
+              - cell "7,300.32" [ref=e300]:
+                - generic [ref=e301]: 7,300.32
+              - cell "View Details" [ref=e302]:
+                - button "View Details" [ref=e304] [cursor=pointer]
+            - row "202307180000002 John@123 loil Medical Reimbursement Canadian Dollar 2023-18-07 Submitted 1,250.12 View Details" [ref=e306]:
+              - cell "202307180000002" [ref=e307]:
+                - generic [ref=e308]: "202307180000002"
+              - cell "John@123 loil" [ref=e309]:
+                - generic [ref=e310]: John@123 loil
+              - cell "Medical Reimbursement" [ref=e311]:
+                - generic [ref=e313]: Medical Reimbursement
+              - cell [ref=e314]
+              - cell "Canadian Dollar" [ref=e315]:
+                - generic [ref=e316]: Canadian Dollar
+              - cell "2023-18-07" [ref=e317]:
+                - generic [ref=e318]: 2023-18-07
+              - cell "Submitted" [ref=e319]:
+                - generic [ref=e320]: Submitted
+              - cell "1,250.12" [ref=e321]:
+                - generic [ref=e322]: 1,250.12
+              - cell "View Details" [ref=e323]:
+                - button "View Details" [ref=e325] [cursor=pointer]
+            - row "202307180000001 John@123 loil Accommodation Afghanistan Afghani Initiated 0.00 View Details" [ref=e327]:
+              - cell "202307180000001" [ref=e328]:
+                - generic [ref=e329]: "202307180000001"
+              - cell "John@123 loil" [ref=e330]:
+                - generic [ref=e331]: John@123 loil
+              - cell "Accommodation" [ref=e332]:
+                - generic [ref=e334]: Accommodation
+              - cell [ref=e335]
+              - cell "Afghanistan Afghani" [ref=e336]:
+                - generic [ref=e337]: Afghanistan Afghani
+              - cell [ref=e338]
+              - cell "Initiated" [ref=e339]:
+                - generic [ref=e340]: Initiated
+              - cell "0.00" [ref=e341]:
+                - generic [ref=e342]: "0.00"
+              - cell "View Details" [ref=e343]:
+                - button "View Details" [ref=e345] [cursor=pointer]
+    - generic [ref=e347]:
+      - paragraph [ref=e348]: OrangeHRM OS 5.7
+      - paragraph [ref=e349]:
+        - text: © 2005 - 2025
+        - link "OrangeHRM, Inc" [ref=e350] [cursor=pointer]:
+          - /url: http://www.orangehrm.com
+        - text: . All rights reserved.
+```

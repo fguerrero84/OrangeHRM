@@ -1,27 +1,34 @@
-import { Page } from '@playwright/test';
+import { Locator, Page } from '@playwright/test';
 
 export default class LoginPage {
-    constructor(public page:Page) {}
+    readonly usernameInput: Locator
+    readonly passwordInput: Locator
+    readonly loginBtn:      Locator
 
-async login(userID:string, password:string) {
-    await this.enterEmail(userID);
-    await this.enterPassword(password);
-    await this.clickLogin();
-}
+    constructor(public page: Page) {
+        this.usernameInput = page.getByRole('textbox', { name: 'Username' });
+        this.passwordInput = page.getByRole('textbox', { name: 'Password' });
+        this.loginBtn = page.getByRole('button', { name: 'Login' });
+     }
 
-async enterEmail(userID:string) {
-    await this.page.getByRole('textbox', { name: 'Username' }).fill(userID);
-}
+    async login(userID: string, password: string): Promise<void> {
+        await this.enterUsername(userID);
+        await this.enterPassword(password);
+        await this.clickLogin();
+    }
 
-async enterPassword(password:string) {
-    await this.page.getByRole('textbox', { name: 'Password' }).fill(password);
-}
+    async enterUsername(userID: string): Promise<void> {
+        await this.usernameInput.fill(userID);
+    }
 
-async clickLogin() {
-    await this.page.getByRole('button', { name: 'Login' }).click();
-}
+    async enterPassword(password: string): Promise<void> {
+        await this.passwordInput.fill(password);
+    }
+
+    async clickLogin(): Promise<void> {
+        await this.loginBtn.click();
+    }
 };
 
 
 
-     
